@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .intro {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background: linear-gradient(90deg, #e0e0e0 50%, #000 50%);
+            flex-wrap: wrap;
+        }
+
+        .intro-text {
+            max-width: 50%;
+        }
+
+        .intro-text h1 {
+            font-size: 3em;
+        }
+
+        .intro-text .name {
+            color: #333;
+        }
+
+        .intro-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-item img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item a {
+            font-size: 1.2em;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .portfolio-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer .social-links a {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .intro-text h1, .intro-text p, .intro-image img {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .intro-text h1 {
+            animation-delay: 0.3s;
+        }
+
+        .intro-text p {
+            animation-delay: 0.6s;
+        }
+
+        .intro-image img {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro {
+                flex-direction: column;
+                text-align: center;
+                mix-blend-mode:blue;
+            }
+
+            .intro-text {
+                max-width: 100%;
+                display: block;
+                margin-left:-70%;
+                font-size: auto;
+                align-items: baseline;
+            }
+            .intro-image{
+                max-width: 100%;
+                display: block;
+            }
+
+
+            .portfolio-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .portfolio-item img {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .section {
+                padding: 30px;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .skill-item {
+                font-size: 1em;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro">
+        <div class="intro-text">
+            <h1>Hi, I am <span class="name">Harsh</span></h1>
+            <p>Web Developer</p>
+        </div>
+        <div class="intro-image">
+            <img src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-programmer-clipart-developer-sitting-behind-his-computer-in-glasses-cartoon-vector-png-image_6815441.png" alt="Harsh">
+        </div>
+    </section>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a passionate web developer with experience in HTML, CSS, and JavaScript. I love creating interactive and responsive web applications that provide an excellent user experience.</p>
+    </section>
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+        </div>
+    </section>
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <div class="portfolio-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgOVEp_HYIMWVJBHgCIz3gOi2Jt4A8ueLvuA&s/200" alt="Personal Finance Dashboard">
+            <div>
+                <a href="https://harshkau.github.io/Personal-Finance-Dashboard/">Personal Finance Dashboard</a>
+                <p>A comprehensive dashboard to manage and track personal finances efficiently.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://i.postimg.cc/VkhftWcj/doubt-tracker.jpg /200" alt="Doubt Tracker">
+            <div>
+                <a href="https://harshkau.github.io/doubt-tracker/">Doubt Tracker</a>
+                <p>A tool to track and manage doubts and queries efficiently for students and educators.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://cdn3.iconfinder.com/data/icons/3d-applications/512/app_icons_media___logo_youtube_video_multimedia_stream_download_play_clip.png" alt="VidStream">
+            <div>
+                <a href="https://harshkau.github.io/VidStream/">VidStream</a>
+                <p>A streaming platform to search, watch, and manage your favorite videos seamlessly.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>You can reach me via email or follow me on my social media profiles linked below.</p>
+    </section>
+    <footer>
+        <div class="social-links">
+            <a href="mailto:kaushikharsh244@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/Harshkau"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2024 Harsh. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
